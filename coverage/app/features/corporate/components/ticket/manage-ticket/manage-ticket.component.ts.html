@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/features/corporate/components/ticket/manage-ticket/manage-ticket.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">all files</a> / <a href="index.html">app/features/corporate/components/ticket/manage-ticket/</a> manage-ticket.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75.44% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.33% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>42/56</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** Angular Dependencies */
+import { OnInit, Component } from '@angular/core';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+&nbsp;
+/** Third Party Dependencies */
+import { SelectItem } from 'primeng/primeng';
+import * as _ from 'lodash';
+/** Module Level Dependencies */
+import { Ticket } from '../../../models/ticket';
+import { TicketService } from '../../../services/ticket.service';
+import { MessageService } from '../../../../core/shared/services/message.service';
+import { ConcernService } from '../../../../core/shared/services/master/concern.service';
+import { DepartmentService } from '../../../../core/shared/services/master/department.service';
+import { PriorityService } from '../../../../core/shared/services/master/priority.service';
+&nbsp;
+/** Third Party Dependencies */
+&nbsp;
+/** Component Declaration */
+@Component({
+    moduleId: module.id,
+    selector: 'manage-ticket',
+    templateUrl: 'manage-ticket.component.html'
+})
+export class ManageTicketComponent implements OnInit {
+    departments: SelectItem[];
+    priorities: SelectItem[];
+    concerns: SelectItem[];
+    params: Params;
+    ticketForm: FormGroup;
+    constructor(
+        private concernService: ConcernService,
+        private departmentService: DepartmentService,
+        private priorityService: PriorityService,
+        private messageService: MessageService,
+        private formBuilder: FormBuilder,
+        private ticketService: TicketService,
+        private route: ActivatedRoute,
+        private router: Router) {
+    }
+    ngOnInit(): void {
+        this.ticketForm = this.formBuilder.group({
+            Id: [null],
+            Department: ['', [Validators.required]],
+            Priority: ['', [Validators.required]],
+            Concern: ['', [Validators.required]],
+            Description: ['', [Validators.required]],
+        });
+        this.concernService.getConcernList().subscribe(result =&gt; {
+            this.concerns = [];
+            this.concerns.push({ label: 'Select Concerns', value: null });
+            _.forEach(result, <span class="fstat-no" title="function not covered" >element </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.concerns.push({</span>
+                    label: element.Name,
+                    value: element.Name
+                });
+            });
+        });
+        this.departmentService.getDepartmentList().subscribe(result =&gt; {
+            this.departments = [];
+            this.departments.push({ label: 'Select Department', value: null });
+            _.forEach(result, <span class="fstat-no" title="function not covered" >element </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.departments.push({</span>
+                    label: element.Name,
+                    value: element.Name
+                });
+            });
+        });
+        this.priorityService.getPriorityList().subscribe(result =&gt; {
+            this.priorities = [];
+            this.priorities.push({ label: 'Select Priority', value: null });
+            _.forEach(result, <span class="fstat-no" title="function not covered" >element </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.priorities.push({</span>
+                    label: element.Name,
+                    value: element.Name
+                });
+            });
+        });
+&nbsp;
+        this.route.params.forEach((params: Params) =&gt; {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (params['id']) {
+                this.params = params['id'];
+                this.ticketService.getTicketById(this.params).subscribe(result =&gt; {
+                    <span class="missing-if-branch" title="if path not taken" >I</span>if (result) {
+<span class="cstat-no" title="statement not covered" >                        this.ticketForm.setValue({</span>
+                            Id: result.Id,
+                            Department: result.Department,
+                            Priority: result.Priority,
+                            Concern: result.Concern,
+                            Description: result.Description,
+                        });
+                    }
+                });
+            }
+        });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    onSubmit({ value, valid }: { value: Ticket, valid: boolean })</span> {
+<span class="cstat-no" title="statement not covered" >        if (this.params) {</span>
+<span class="cstat-no" title="statement not covered" >            this.ticketService.editTicket(value).subscribe(<span class="fstat-no" title="function not covered" >result </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                if (result) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Ticket Edit' });</span>
+<span class="cstat-no" title="statement not covered" >                    this.router.navigate(['/corporate/log-ticket']);</span>
+                }
+            });
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.ticketService.saveTicket(value).subscribe(<span class="fstat-no" title="function not covered" >result </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                if (result) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Ticket Logged' });</span>
+<span class="cstat-no" title="statement not covered" >                    this.router.navigate(['/corporate/log-ticket']);</span>
+                }
+            });
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    cancel() {</span>
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/corporate/log-ticket']);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

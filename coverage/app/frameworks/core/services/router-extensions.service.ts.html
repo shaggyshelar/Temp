@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/frameworks/core/services/router-extensions.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">app/frameworks/core/services/</a> router-extensions.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">68.75% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">20% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">76.92% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>10/13</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Injectable } from '@angular/core';
+import { LocationStrategy } from '@angular/common';
+import { Router, UrlTree } from '@angular/router';
+import { NavigationExtras } from '@angular/router/src/router';
+&nbsp;
+export interface ExtendedNavigationExtras extends NavigationExtras {
+  // Options for nativescript
+  clearHistory?: boolean;
+  animated?: boolean;
+  transition?: { // See -&gt; https://docs.nativescript.org/api-reference/interfaces/_ui_frame_.navigationtransition.html
+    name?: string;
+    instance?: any;
+    duration?: number;
+    curve?: any;
+  };
+  // END - Options for nativescript
+}
+&nbsp;
+export interface IRouterExtensions {
+  navigate(commands: Array&lt;any&gt;, extras?: ExtendedNavigationExtras): Promise&lt;boolean&gt;;
+  navigateByUrl(url: string | UrlTree, options?: ExtendedNavigationExtras): Promise&lt;boolean&gt;;
+  back(): void;
+}
+&nbsp;
+@Injectable()
+export class RouterExtensions implements IRouterExtensions {
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor(public <span class="cstat-no" title="statement not covered" >router: Router,</span> private <span class="cstat-no" title="statement not covered" >locationStrategy: LocationStrategy)</span></span> { }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public navigate(commands: Array&lt;any&gt;, extras?: ExtendedNavigationExtras)</span>: Promise&lt;boolean&gt; {
+<span class="cstat-no" title="statement not covered" >    return this.router.navigate(commands, extras);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public navigateByUrl(url: string | UrlTree, options?: ExtendedNavigationExtras)</span>: Promise&lt;boolean&gt; {
+<span class="cstat-no" title="statement not covered" >    return this.router.navigateByUrl(url);</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public back() {</span>
+<span class="cstat-no" title="statement not covered" >    this.locationStrategy.back();</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

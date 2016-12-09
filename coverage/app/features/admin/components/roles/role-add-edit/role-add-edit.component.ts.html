@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/features/admin/components/roles/role-add-edit/role-add-edit.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">all files</a> / <a href="index.html">app/features/admin/components/roles/role-add-edit/</a> role-add-edit.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.06% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>37/66</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.78% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">53.97% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>34/63</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** Angular Dependencies */
+import { OnInit, Component } from '@angular/core';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+/** Other Module Dependencies */
+import { Observable } from 'rxjs/Rx';
+&nbsp;
+import { RoleService } from '../../../services/role.service';
+import { PermissionService } from '../../../services/permission.service';
+import { Role } from '../../../models/role';
+import { MessageService } from '../../../../core/shared/services/message.service';
+/** Component Declaration */
+@Component({
+    moduleId: module.id,
+    selector: 'role-add-edit',
+    templateUrl: 'role-add-edit.component.html',
+})
+&nbsp;
+export class RoleAddEditComponent implements OnInit {
+    errorMessage: any;
+    params: number;
+    permissionList: any;
+    filteredPermissionList: any;
+    selectedPermission: any;
+    rolePermissionList: Observable&lt;any&gt;;
+    roleForm: FormGroup;
+&nbsp;
+    constructor(
+        private messageService: MessageService,
+        private formBuilder: FormBuilder,
+        private roleService: RoleService,
+        private permissionService: PermissionService,
+        private route: ActivatedRoute, private router: Router) {
+    }
+    ngOnInit() {
+        this.roleForm = this.formBuilder.group({
+            ID: [0],
+            Name: ['', [Validators.required]],
+        });
+        this.route.params.forEach((params: Params) =&gt; {
+            this.params = params['roleId'];
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (this.params) {
+                this.roleService.getRoleById(this.params)
+                    .subscribe(
+                    results =&gt; {
+                        this.roleForm.setValue({
+                            ID: results.ID,
+                            Name: results.Name
+                        });
+                    },
+<span class="fstat-no" title="function not covered" >                    error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+                this.getAllPermissions();
+                this.getPermissionsByRole();
+            }
+        });
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    onSubmit({ value, valid }: { value: Role, valid: boolean })</span> {
+<span class="cstat-no" title="statement not covered" >        if (this.params) {</span>
+<span class="cstat-no" title="statement not covered" >            this.roleService.editRole(value)</span>
+                .subscribe(
+<span class="fstat-no" title="function not covered" >                results </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                    this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Record Updated' });</span>
+<span class="cstat-no" title="statement not covered" >                    this.router.navigate(['/admin/role']);</span>
+                },
+<span class="fstat-no" title="function not covered" >                error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.roleService.addRole(value)</span>
+                .subscribe(
+<span class="fstat-no" title="function not covered" >                results </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                    this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Record Added' });</span>
+<span class="cstat-no" title="statement not covered" >                    this.router.navigate(['/admin/role']);</span>
+                },
+<span class="fstat-no" title="function not covered" >                error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+        }
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    onAddPermission() {</span>
+<span class="cstat-no" title="statement not covered" >        this.selectedPermission.RoleId = this.params;</span>
+<span class="cstat-no" title="statement not covered" >        this.permissionService.addPermissionToRole(this.selectedPermission)</span>
+            .subscribe(
+<span class="fstat-no" title="function not covered" >            results </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.getPermissionsByRole();</span>
+<span class="cstat-no" title="statement not covered" >                this.selectedPermission = null;</span>
+<span class="cstat-no" title="statement not covered" >                this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Permission Added' });</span>
+            },
+<span class="fstat-no" title="function not covered" >            error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    filterPermission(event: any)</span> {
+<span class="cstat-no" title="statement not covered" >        let query = event.query;</span>
+<span class="cstat-no" title="statement not covered" >        this.filteredPermissionList = [];</span>
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; this.permissionList.length; i++) {</span>
+<span class="cstat-no" title="statement not covered" >            let permission = this.permissionList[i];</span>
+<span class="cstat-no" title="statement not covered" >            if (permission.Text.toLowerCase().indexOf(query.toLowerCase()) !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >                this.filteredPermissionList.push(permission);</span>
+            }
+        }
+    }
+<span class="fstat-no" title="function not covered" >    revokePermission(permission)</span> {
+<span class="cstat-no" title="statement not covered" >        permission.RoleId = this.params;</span>
+<span class="cstat-no" title="statement not covered" >        this.permissionService.revokePermission(permission)</span>
+            .subscribe(
+<span class="fstat-no" title="function not covered" >            results </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.getPermissionsByRole();</span>
+<span class="cstat-no" title="statement not covered" >                this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Permission Revoked' });</span>
+            },
+<span class="fstat-no" title="function not covered" >            error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+    }
+<span class="fstat-no" title="function not covered" >    onCancel() {</span>
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/admin/role']);</span>
+    }
+    private getPermissionsByRole() {
+        this.rolePermissionList = this.permissionService.getPermissionsByRole(this.params);
+    }
+    private getAllPermissions() {
+        this.permissionService.getAllPermission()
+            .subscribe(
+            results =&gt; {
+                this.permissionList = &lt;any&gt;results;
+            },
+<span class="fstat-no" title="function not covered" >            error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+    }
+}
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/frameworks/analytics/services/analytics.service.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">app/frameworks/analytics/services/</a> analytics.service.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">74.58% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>44/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>8/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">72.92% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>35/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// angular
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Observable';
+import { Injectable, Inject } from '@angular/core';
+&nbsp;
+// libs
+import * as _ from 'lodash';
+import { Angulartics2 } from 'angulartics2';
+import { Angulartics2Segment } from 'angulartics2/dist/providers';
+&nbsp;
+export interface IAnalyticsProperties {
+  category?: string;
+  label?: string;
+  value?: number;
+}
+&nbsp;
+export interface IAnalytics {
+  track(action: string, properties: IAnalyticsProperties): void;
+}
+&nbsp;
+/**
+ * Wrapper for Angulartics2
+ */
+@Injectable()
+export class AnalyticsService implements IAnalytics {
+&nbsp;
+  constructor(private angulartics2: Angulartics2, private segment: Angulartics2Segment) {
+    // options
+    // https://github.com/angulartics/angulartics2/blob/master/src/core/angulartics2.ts#L90-L104
+    // angulartics2.virtualPageviews(value: boolean);
+    // angulartics2.excludeRoutes(routes: Array&lt;string&gt;);
+    // angulartics2.firstPageview(value: boolean);
+    // angulartics2.withBase(value: string);
+&nbsp;
+    this.devMode(false);
+  }
+&nbsp;
+  /**
+   * Track actions, events, etc.
+   **/
+  public track(action: string, properties: IAnalyticsProperties): void {
+    if (!this.devMode()) {
+      this.segment.eventTrack(action, properties);
+    }
+  }
+&nbsp;
+  /**
+   * Called automatically by default with Angular 2 Routing
+   * However, that can be turned off and this could be used manually
+   **/
+  public pageTrack(path: string, location: any) {
+    if (!this.devMode()) {
+      this.segment.pageTrack(path, location);
+    }
+  }
+&nbsp;
+  /**
+   * Identify authenticated users
+   **/
+  public identify(properties: any) {
+    if (!this.devMode()) {
+      this.segment.setUserProperties(properties);
+    }
+  }
+&nbsp;
+  /**
+   * Control whether analytics are tracked
+   * true: dev mode on, therefore do not track anything
+   * false: dev mode off, track everything
+   **/
+  public devMode(enable?: boolean): boolean {
+    if (typeof enable !== 'undefined') {
+      this.angulartics2.developerMode(enable);
+    }
+    return this.angulartics2.settings.developerMode;
+  }
+}
+&nbsp;
+/**
+ * Base class
+ * Standardizes tracking actions and categorization
+ */
+export class Analytics implements IAnalytics {
+  // sub-classes should define their category
+  public category: string;
+&nbsp;
+  constructor(@Inject(AnalyticsService) public analytics: AnalyticsService) {
+&nbsp;
+  }
+&nbsp;
+  /**
+   * Track actions, events, etc.
+   **/
+  track(action: string, properties: IAnalyticsProperties): void {
+    this.analytics.track(action, _.extend(properties, { category: this.category }));
+  }
+}
+&nbsp;
+export class CustomAnalytics extends Analytics {
+  public baseURL: string;
+&nbsp;
+<span class="fstat-no" title="function not covered" >  constructor( @Inject(AnalyticsService) public <span class="cstat-no" title="statement not covered" >analytics: AnalyticsService,</span> public <span class="cstat-no" title="statement not covered" >http: Http)</span></span> {
+<span class="cstat-no" title="statement not covered" >    super(analytics);</span>
+<span class="cstat-no" title="statement not covered" >    this.baseURL = '/';</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  protected toURL(apiURL: string)</span>: string {
+<span class="cstat-no" title="statement not covered" >    return this.baseURL + apiURL;</span>
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  protected httpGet(url: string, callback: Function)</span>: void {
+<span class="cstat-no" title="statement not covered" >    this.http.get(this.toURL(url))</span>
+      .toPromise()
+      .then(<span class="fstat-no" title="function not covered" >res </span>=&gt; { <span class="cstat-no" title="statement not covered" >callback(res.json() || {}); </span>})
+      .catch(this.handleError);
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  protected handleError(error: Response | any)</span> {
+    // In a real world app, we might use a remote logging infrastructure
+<span class="cstat-no" title="statement not covered" >    let errMsg: string;</span>
+<span class="cstat-no" title="statement not covered" >    if (error instanceof Response) {</span>
+<span class="cstat-no" title="statement not covered" >      const body = error.json() || '';</span>
+<span class="cstat-no" title="statement not covered" >      const err = body.error || JSON.stringify(body);</span>
+<span class="cstat-no" title="statement not covered" >      errMsg = `${error.status} - ${error.statusText || ''} ${err}`;</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      errMsg = error.message ? error.message : error.toString();</span>
+    }
+<span class="cstat-no" title="statement not covered" >    console.error(errMsg);</span>
+<span class="cstat-no" title="statement not covered" >    return Observable.throw(errMsg);</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/features/corporate/components/conference-booking/conference/conference.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">all files</a> / <a href="index.html">app/features/corporate/components/conference-booking/conference/</a> conference.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.83% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>53/59</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.62% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>11/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">89.47% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>51/57</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** Angular Dependencies */
+import { OnInit, Inject, ElementRef, Component } from '@angular/core';
+import { ActivatedRoute, Router, Params } from '@angular/router';
+//import * as localForage from 'localforage';
+&nbsp;
+/** Third Party Dependencies */
+import { Observable } from 'rxjs/Rx';
+&nbsp;
+/** Other Module Dependencies */
+import * as moment from 'moment/moment';
+import * as _ from 'lodash';
+&nbsp;
+/** Module Level Dependencies */
+import { ConferenceBookingService } from '../../../services/conference-booking.service';
+import { Conference } from '../../../models/conference';
+import { RoomService } from '../../../../core/shared/services/master/room.service';
+&nbsp;
+/** Component Declaration */
+@Component({
+    moduleId: module.id,
+    selector: 'conference-booking',
+    templateUrl: 'conference.component.html',
+    styleUrls: ['conference.component.css']
+})
+export class ConferenceComponent implements OnInit {
+    elementRef: ElementRef;
+    allEvents: any[];
+    header: any;
+    selectedEvent: Conference;
+    dialogVisible: boolean = false;
+    idGen: number = 100;
+    headerConfig: any;
+    minTime: string;
+    maxTime: string;
+    conferenceRooms: Observable&lt;any&gt;;
+    selectedRoom: string;
+    serverEvents: Observable&lt;Conference[]&gt;;
+    constructor(
+        private roomService: RoomService,
+        private conferenceBookingService: ConferenceBookingService,
+        private router: Router, private route: ActivatedRoute,
+        @Inject(ElementRef) elementRef: ElementRef
+    ) {
+        this.selectedEvent = new Conference(0,null, '', '', '', false,'');
+        this.elementRef = elementRef;
+    }
+    ngAfterViewInit() {
+        var el: HTMLElement = this.elementRef.nativeElement;
+        var slots = el.querySelectorAll('.ui-widget-content');
+        _.forEach(slots, function (elem, key) {
+            // if (key !== 0) {
+            //     elem.addEventListener('mouseover', function (event) {
+            //         if (!this.innerHTML &amp;&amp; !this.className.includes('fc-axis')) {
+            //           this.innerHTML='&lt;div class="btn calender-btn-add"  style="float:right"&gt;+Add&lt;/div&gt;';
+            //         }
+            //     });
+            //     elem.addEventListener('mouseout', function (event) {
+            //         if (!this.className.includes('fc-axis')) {
+            //              this.innerHTML='';
+            //         }
+            //     });
+            // }
+        });
+    }
+    ngOnInit() {
+        this.serverEvents = this.conferenceBookingService.getConferenceBooking();
+        this.serverEvents.subscribe(result =&gt; {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (result) {
+                this.allEvents = result;
+                this.route.params.forEach((params: Params) =&gt; {
+                    let room = params['room'];
+                    <span class="missing-if-branch" title="else path not taken" >E</span>if (room) {
+                        this.getEventByRooms(room);
+                    } else {
+<span class="cstat-no" title="statement not covered" >                        this.getEventByRooms('AllRooms');</span>
+                    }
+                });
+            }
+        });
+        this.minTime = '07:00:00';
+        this.maxTime = '22:00:00';
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (window.screen.width &lt; 768) {
+<span class="cstat-no" title="statement not covered" >            this.headerConfig = {</span>
+                left: 'prev,next today',
+                center: 'title',
+                right: 'agendaWeek,agendaDay'
+            };
+        } else {
+            this.headerConfig = {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay'
+            };
+        }
+&nbsp;
+        //    localForage.getItem('conferenceEvent').then((value) =&gt; {
+        //         if (value !== null) {
+        //             this.allEvents.push(value);
+        //         }
+        //         this.events = this.allEvents;
+        //     });
+        //this.events = this.allEvents;
+        this.conferenceRooms = this.roomService.getConferenceRooms();
+    };
+<span class="fstat-no" title="function not covered" >    handleDayClick(event)</span> {
+<span class="cstat-no" title="statement not covered" >        this.conferenceBookingService.setSelectedSlot(event);</span>
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/corporate/newBooking']);</span>
+    }
+&nbsp;
+    handleEventClicked(event: any) {
+        this.selectedEvent = event.calEvent;
+        this.selectedEvent.start = moment(this.selectedEvent.start).format('DD/MM/YY hh:MM a');
+        this.selectedEvent.end = moment(this.selectedEvent.end).format('DD/MM/YY hh:MM a');
+        this.dialogVisible = true;
+    }
+&nbsp;
+    getEventByRooms(room: string) {
+        this.selectedRoom = room;
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (room === 'AllRooms') {
+<span class="cstat-no" title="statement not covered" >            this.serverEvents = new Observable&lt;Conference[]&gt;(<span class="fstat-no" title="function not covered" >observer </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                observer.next(this.allEvents);</span>
+            });
+        } else {
+            let events: Conference[] = [];
+            events = _.filter(this.allEvents, function (item) {
+                return item.Room.Name === room;
+            });
+            this.serverEvents = new Observable&lt;Conference[]&gt;(observer =&gt; {
+                observer.next(events);
+            });
+        }
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

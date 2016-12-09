@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/features/admin/components/roles/role-list/role-list.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">all files</a> / <a href="index.html">app/features/admin/components/roles/role-list/</a> role-list.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">77.78% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>21/27</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/0</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">44.44% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">73.91% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>17/23</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/** Angular Dependencies */
+import { OnInit, Component } from '@angular/core';
+import { Router } from '@angular/router';
+&nbsp;
+/** Other Module Dependencies */
+import { Observable } from 'rxjs/Rx';
+&nbsp;
+import { RoleService } from '../../../services/role.service';
+import { Role } from '../../../models/role';
+import { MessageService } from '../../../../core/shared/services/message.service';
+&nbsp;
+/** Component Declaration */
+@Component({
+    moduleId: module.id,
+    selector: 'admin-role-list',
+    templateUrl: 'role-list.component.html',
+    styleUrls: ['role-list.component.css']
+})
+&nbsp;
+export class RoleListComponent implements OnInit {
+    roleList: Observable&lt;Role[]&gt;;
+    role: Role;
+    errorMessage: any;
+    constructor(private messageService: MessageService, private roleService: RoleService, private router: Router) {
+        this.role = new Role(0, '');
+    }
+    ngOnInit() {
+        this.getRole();
+    }
+&nbsp;
+    getRole() {
+        this.roleList = this.roleService.getRoles();
+    }
+<span class="fstat-no" title="function not covered" >    onEditClick(role: Role)</span> {
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/admin/role/edit', role.ID]);</span>
+    }
+<span class="fstat-no" title="function not covered" >    onDelete(role: Role)</span> {
+<span class="cstat-no" title="statement not covered" >        this.roleService.deleteRole(role.ID)</span>
+            .subscribe(
+<span class="fstat-no" title="function not covered" >            results </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.getRole();</span>
+<span class="cstat-no" title="statement not covered" >                this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Record Deleted' });</span>
+            },
+<span class="fstat-no" title="function not covered" >            error </span>=&gt; <span class="cstat-no" title="statement not covered" >this.errorMessage = &lt;any&gt;error)</span>;
+    }
+<span class="fstat-no" title="function not covered" >    goToAdd() {</span>
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/admin/role/add']);</span>
+    }
+}
+&nbsp;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

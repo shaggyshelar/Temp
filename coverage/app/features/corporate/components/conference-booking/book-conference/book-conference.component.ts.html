@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/features/corporate/components/conference-booking/book-conference/book-conference.component.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../../../index.html">all files</a> / <a href="index.html">app/features/corporate/components/conference-booking/book-conference/</a> book-conference.component.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.79% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>28/39</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>4/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.05% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>27/38</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Router } from '@angular/router';
+import { OnInit, Component } from '@angular/core';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
+&nbsp;
+/** Other Module Dependencies */
+import { SelectItem } from 'primeng/primeng';
+import * as _ from 'lodash';
+//import * as localForage from 'localforage';
+import { Conference } from '../../../models/conference';
+import { ConferenceBookingService } from '../../../services/conference-booking.service';
+import { MessageService } from '../../../../core/shared/services/message.service';
+import * as moment from 'moment/moment';
+import { RoomService } from '../../../../core/shared/services/master/room.service';
+/** Component Declaration */
+@Component({
+    moduleId: module.id,
+    selector: 'book-conference',
+    templateUrl: 'book-conference.component.html'
+})
+&nbsp;
+export class BookComponent implements OnInit {
+    property: string;
+    recurrance: boolean;
+    recurrancePattern: string;
+    recurranceEndDate: Date;
+    conferenceRooms: SelectItem[];
+    selectedRoom: any;
+    startTime: Date;
+    endTime: Date;
+    conferenceForm: FormGroup;
+    endTimeError: boolean = false;
+    constructor(
+        private roomService: RoomService,
+        private messageService: MessageService,
+        private formBuilder: FormBuilder,
+        private conferenceBookingService: ConferenceBookingService,
+        private router: Router
+    ) { }
+    ngOnInit() {
+        this.conferenceForm = this.formBuilder.group({
+            //id: [null],
+            title: ['', [Validators.required]],
+            start: ['', [Validators.required]],
+            end: ['', [Validators.required]],
+            Room: ['', [Validators.required]],
+            allDay: [false],
+            Description: [''],
+            SpecialComment: [''],
+            NoOfGuest: ['', Validators.pattern('[0-9]+')],
+&nbsp;
+        });
+        this.roomService.getConferenceRooms().subscribe(result =&gt; {
+            this.conferenceRooms = [];
+            this.conferenceRooms.push({ label: 'Select Room', value: null });
+            _.forEach(result, <span class="fstat-no" title="function not covered" >element </span>=&gt; {
+<span class="cstat-no" title="statement not covered" >                this.conferenceRooms.push({</span>
+                    label: element.Name,
+                    value: element
+                });
+            });
+        });
+        let event = this.conferenceBookingService.getSelectedSlot();
+    }
+<span class="fstat-no" title="function not covered" >    onSubmit({ value, valid }: { value: Conference, valid: boolean })</span> {
+<span class="cstat-no" title="statement not covered" >        if (moment(value.end).diff(value.start, 'minutes') &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            value.color = value.Room.Color;</span>
+<span class="cstat-no" title="statement not covered" >            value.start = moment(value.start).format();</span>
+<span class="cstat-no" title="statement not covered" >            value.end = moment(value.end).format();</span>
+<span class="cstat-no" title="statement not covered" >            this.conferenceBookingService.saveConference(value).subscribe(<span class="fstat-no" title="function not covered" >result </span>=&gt; {</span>
+<span class="cstat-no" title="statement not covered" >                if (result) {</span>
+<span class="cstat-no" title="statement not covered" >                    this.messageService.addMessage({ severity: 'success', summary: 'Success', detail: 'Conference Room Booked' });</span>
+<span class="cstat-no" title="statement not covered" >                    this.router.navigate(['/corporate/conferenceBooking']);</span>
+                }
+            });
+        } else {
+<span class="cstat-no" title="statement not covered" >            this.endTimeError = true;</span>
+        }
+    }
+<span class="fstat-no" title="function not covered" >    onCancel() {</span>
+<span class="cstat-no" title="statement not covered" >        this.router.navigate(['/corporate/conferenceBooking']);</span>
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../../../sorter.js"></script>
+</body>
+</html>

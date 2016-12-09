@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/frameworks/test/e2e/dropdowns.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">app/frameworks/test/e2e/</a> dropdowns.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">30% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>6/20</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">17.65% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/17</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">declare var browser: any, element: any, by: any;
+&nbsp;
+/**
+* Usage: selectDropdownByNumber ( selector, index)
+* selector : select element
+* index : index in the dropdown, 1 base.
+*/
+<span class="fstat-no" title="function not covered" >export function selectDropdownByNumber(selector: string, index: number, milliseconds: number)</span> {
+<span class="cstat-no" title="statement not covered" >  element(by.css(selector)).all(by.tagName('option'))</span>
+    .then(<span class="fstat-no" title="function not covered" >function(options: any)</span> {
+<span class="cstat-no" title="statement not covered" >      options[index].click();</span>
+    });
+<span class="cstat-no" title="statement not covered" >  if (typeof milliseconds !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >    browser.sleep(milliseconds);</span>
+  }
+}
+&nbsp;
+&nbsp;
+/**
+* Usage: selectDropdownByValue (selector, item)
+* selector : select element
+* item : option(s) in the dropdown.
+*/
+<span class="fstat-no" title="function not covered" >export function selectDropdownByValue(selector: string, item: string, milliseconds: number)</span> {
+  // var desiredOption: any;
+<span class="cstat-no" title="statement not covered" >  element(by.css(selector)).sendKeys(item);</span>
+<span class="cstat-no" title="statement not covered" >  if (typeof milliseconds !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >    browser.sleep(milliseconds);</span>
+  }
+}
+&nbsp;
+/**
+* Usage: selectRandomDropdownReturnText ( selector, milliseconds)
+* selector : select random element
+* index : wait time to select value for drop down.
+*/
+<span class="fstat-no" title="function not covered" >export function selectRandomDropdownReturnText(selector: string, milliseconds: number)</span> {
+<span class="cstat-no" title="statement not covered" >  element(by.css(selector)).all(by.tagName('option')).then(<span class="fstat-no" title="function not covered" >function(options: any)</span> {</span>
+<span class="cstat-no" title="statement not covered" >    var randomNumber = Math.floor((Math.random() * options.length</span>
+    ));
+<span class="cstat-no" title="statement not covered" >    options[randomNumber].click();</span>
+<span class="cstat-no" title="statement not covered" >    return options[randomNumber].getText().then(<span class="fstat-no" title="function not covered" >function(text: string)</span> {</span>
+<span class="cstat-no" title="statement not covered" >      return text;</span>
+    });
+  });
+<span class="cstat-no" title="statement not covered" >  if (typeof milliseconds !== 'undefined') {</span>
+<span class="cstat-no" title="statement not covered" >    browser.sleep(milliseconds);</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

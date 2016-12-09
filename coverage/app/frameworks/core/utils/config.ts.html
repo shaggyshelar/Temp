@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/frameworks/core/utils/config.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../../prettify.css" />
+    <link rel="stylesheet" href="../../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../../index.html">all files</a> / <a href="index.html">app/frameworks/core/utils/</a> config.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84.62% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>22/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">50% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>2/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">75% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>6/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">84% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>21/25</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">17×</span>
+<span class="cline-any cline-yes">68×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// Feel free to extend this interface
+// depending on your app specific config.
+export interface EnvConfig {
+  API?: string;
+  ENV?: string;
+}
+&nbsp;
+interface IPlatforms {
+  WEB: string;
+  MOBILE_NATIVE: string;
+  MOBILE_HYBRID: string;
+  DESKTOP: string;
+}
+&nbsp;
+export class Config {
+&nbsp;
+  public static PageClass: any;
+&nbsp;
+  public static DEBUG: any = {
+    LEVEL_1: false, // .info only
+    LEVEL_2: false, // .warn only
+    LEVEL_3: false, // .error only
+    LEVEL_4: false  // .log + all the above
+  };
+&nbsp;
+  // supported platforms
+  public static PLATFORMS: IPlatforms = {
+    WEB: 'web',
+    MOBILE_NATIVE: 'mobile_native',
+    MOBILE_HYBRID: 'mobile_hybrid',
+    DESKTOP: 'desktop'
+  };
+&nbsp;
+  // current target (defaults to web)
+  public static PLATFORM_TARGET: string = Config.PLATFORMS.WEB;
+&nbsp;
+  // convenient platform checks
+<span class="fstat-no" title="function not covered" >  public static IS_WEB(): boolean {</span>
+<span class="cstat-no" title="statement not covered" >    return Config.PLATFORM_TARGET === Config.PLATFORMS.WEB;</span>
+  }
+&nbsp;
+  public static IS_MOBILE_NATIVE(): boolean {
+    return Config.PLATFORM_TARGET === Config.PLATFORMS.MOBILE_NATIVE;
+  }
+&nbsp;
+<span class="fstat-no" title="function not covered" >  public static IS_MOBILE_HYBRID(): boolean {</span>
+<span class="cstat-no" title="statement not covered" >    return Config.PLATFORM_TARGET === Config.PLATFORMS.MOBILE_HYBRID;</span>
+  }
+&nbsp;
+  public static IS_DESKTOP(): boolean {
+    return Config.PLATFORM_TARGET === Config.PLATFORMS.DESKTOP;
+  }
+&nbsp;
+  public static ENVIRONMENT(): EnvConfig {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (Config.IS_MOBILE_NATIVE()) {
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        API: 'your api endpoint',
+        ENV: 'nativescript'
+      };
+    } else {
+      return JSON.parse('&lt;%= ENV_CONFIG %&gt;');
+    }
+  }
+&nbsp;
+  public static IS_DEBUG_MODE(): boolean {
+    for (let key in Config.DEBUG) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (Config.DEBUG[key]) {
+        // if any level is on, debug mode is on
+<span class="cstat-no" title="statement not covered" >        return true;</span>
+      }
+    }
+    return false;
+  }
+&nbsp;
+  // reset debug defaults
+  public static RESET() {
+    for (let key in Config.DEBUG) {
+      Config.DEBUG[key] = false;
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 09 2016 06:01:09 GMT+0000 (UTC)
+</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>
